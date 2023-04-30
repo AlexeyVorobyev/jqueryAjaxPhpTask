@@ -26,11 +26,24 @@
 <body>
 <div class="taskAJAX">
   <div class="taskAJAX_container">
-    <h3 class="taskAJAX_header">DATABASE</h3>
+    <h3 class="taskAJAX_header">CALCULATOR</h3>
     <form class="form" id="form">
-      <input class="form_input" placeholder="Enter your name and surname" id="fio" name="fio" >
-      <input class="form_input" placeholder="Enter a valid email address" id="email" name="email" >
-      <input class="form_input" placeholder="Enter a phone number" id="phone" name="phone" >
+      <div class="form_radioContainer">
+        <h2 class="form_radioHeader">Gender:</h2>
+        <div class="form_radio">
+          <input class="form_radioInput" type="radio" name="sex" id="sexMan" checked value="man">
+          <label class="form_radioLabel" for="sexMan">Man</label>
+        </div>
+        <div class="form_radio">
+          <input class="form_radioInput" type="radio" name="sex" id="sexWoman" value="woman">
+          <label class="form_radioLabel" for="sexWoman">Woman</label>
+        </div>
+      </div>
+      <div class="form_rangeContainer">
+        <h2 class="form_rangeHeader" id="height">Height: 180cm</h2>
+        <input class="form_rangeInput" type="range" name="height" min="150" max="210" value="180" id="range">
+      </div>
+      <h2 class="form_result" id="result">Ideal weight:</h2>
       <button class="form_button" type="submit" name="subm">
         <p class="form_buttonText">SUBMIT</p>
       </button>

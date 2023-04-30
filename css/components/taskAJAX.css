@@ -9,6 +9,7 @@
   padding:10px;
   width: 40%;
   border:2px grey solid;
+  max-width: 400px;
 }
 
 .taskAJAX_header {
@@ -23,8 +24,9 @@
 
 .form {
   margin-top:10px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows:repeat(6,1fr) ;
   gap:10px;
 }
 
@@ -47,6 +49,10 @@
   background-color: white;
   border-radius: 12px;
   border:2px grey solid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 7;
 }
 
 .form_button:hover {
@@ -181,5 +187,70 @@
 
 .invisible {
   display:none;
+}
+
+.form_radioContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.form_radio {
+  display: flex;
+  width:100px;
+}
+
+.form_radioInput {
+  width: 18px;
+}
+
+.form_radioLabel {
+  color: white;
+  font-size: 18px;
+  margin-left: 9px;
+}
+
+.form_radioHeader {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.form_rangeContainer {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.form_rangeHeader {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.form_rangeInput {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.form_result {
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 0;
+  margin-left: 7px;
 }
 
