@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     request.done(function (response,textStatus,jqXHR) {
       console.log('success');
-      $('#result').text('Ideal weight: ' + response);
+      $('#result').text('Ideal weight: ' + response  + 'kg');
     })
 
     request.fail(function (textStatus,jqXHR,errorThrown) {
